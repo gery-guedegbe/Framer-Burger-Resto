@@ -4,7 +4,7 @@ Bienvenue sur **Burger Resto**, un site vitrine interactif pour un restaurant de
 
 ## 🚀 Démo
 
-Lien vers la démo : [Burger Resto Demo](https://lien-de-la-demo.com)
+Lien vers la démo : [Burger Resto Demo](https://framer-burger-resto.vercel.app/)
 
 ## 🛠️ Technologies Utilisées
 
