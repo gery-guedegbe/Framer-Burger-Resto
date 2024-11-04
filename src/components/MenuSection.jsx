@@ -14,7 +14,6 @@ import MenuCard from "./MenuCard.jsx";
 
 const MenuSection = () => {
   const sectionRef = useRef(null);
-
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"],
@@ -35,9 +34,9 @@ const MenuSection = () => {
     scrollYProgress,
     [0, 1],
     screenWidth < 768
-      ? ["0%", "-0%"]
+      ? ["5%", "-5%"]
       : screenWidth < 1024
-        ? ["0%", "-60%"]
+        ? ["10%", "-10%"]
         : ["15%", "-15%"],
   );
 
@@ -45,7 +44,7 @@ const MenuSection = () => {
     scrollYProgress,
     [0, 1],
     screenWidth < 768
-      ? ["-2%", "50%"]
+      ? ["-5%", "5%"]
       : screenWidth < 1024
         ? ["-8%", "8%"]
         : ["-10%", "10%"],
@@ -54,7 +53,7 @@ const MenuSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="flex min-h-screen flex-col items-start gap-8 xl:gap-32"
+      className="flex min-h-screen flex-col items-start gap-16 xl:gap-32"
     >
       <h1 className="mb-4 text-3xl font-extrabold text-black md:mt-6 xl:mb-6 xl:text-5xl">
         Our Menu
@@ -73,7 +72,7 @@ const MenuSection = () => {
           <motion.img
             src={item.img}
             alt={`${item.title} Image`}
-            className="relative z-10 flex h-auto w-full max-w-md items-center justify-center rounded-3xl object-cover"
+            className="relative z-10 h-auto w-full max-w-md rounded-3xl object-cover"
             style={{ y: yTransformImg }}
             transition={{ ease: [0.25, 0.1, 0.25, 1], duration: 0.6 }}
           />
@@ -86,7 +85,6 @@ const MenuSection = () => {
             <h3 className="text-xl font-extrabold text-black xl:text-2xl">
               {item.title}
             </h3>
-
             <MenuCard title={item.title} items={item.data} />
           </motion.div>
         </div>

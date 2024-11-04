@@ -30,7 +30,6 @@ const News = () => {
           <h1 className="text-3xl font-extrabold text-black xl:text-5xl">
             Latest news from Burger Haven
           </h1>
-
           <p className="text-sm font-semibold text-black/90 xl:text-lg">
             Discover the secrets behind our mouth-watering burgers, and get the
             scoop on exclusive discounts.
@@ -43,28 +42,30 @@ const News = () => {
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.4 }}
-        className="grid w-full grid-cols-1 gap-2 p-4 md:grid-cols-2 xl:grid-cols-3"
+        className="grid w-full grid-cols-1 gap-6 p-4 md:grid-cols-2 xl:grid-cols-3"
       >
         {LatestNewData.map((item, index) => (
-          <div
+          <motion.div
             key={index}
             onClick={() => navigateToArticle(item.id)}
-            className="flex h-full w-full max-w-sm cursor-pointer flex-col items-start justify-center gap-3 rounded-lg p-4"
+            className="flex h-full w-full max-w-sm cursor-pointer flex-col items-start justify-center gap-3 rounded-lg bg-white p-4 transition-transform"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: index * 0.1 }}
+            whileHover={{ scale: 1.05 }}
           >
             <img
               src={item.image}
               alt={item.title}
               className="hero-shadow w-full rounded-3xl object-cover"
             />
-
             <span className="mt-3 text-lg font-semibold text-black/90">
               {item.createAt}
             </span>
-
             <p className="text-xl font-bold text-black lg:text-2xl xl:text-3xl">
               {item.title}
             </p>
-          </div>
+          </motion.div>
         ))}
       </motion.div>
 

@@ -94,6 +94,7 @@ const Carousel = ({ data }) => {
                   opacity: { duration: 0.4 },
                   scale: { type: "spring", stiffness: 200, damping: 20 },
                 }}
+                whileHover={{ scale: 1.05 }}
                 className="flex h-full w-full max-w-md cursor-pointer flex-col items-start justify-center gap-3 rounded-lg p-4"
               >
                 <img
