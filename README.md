@@ -41,7 +41,7 @@ Pour installer et exécuter ce projet en local :
 1. Clonez le dépôt :
 
    ```bash
-   git clone https://github.com/votre-utilisateur/burger-resto.git
+   git clone https://github.com/gery-guedegbe/Framer-Burger-Resto.git
    ```
 
 2. Accédez au dossier du projet :
